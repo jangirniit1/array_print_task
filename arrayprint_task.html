@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <input type="text" placeholder="Enter a Name" id="newss">
+        <button id="btn1">Add Array</button>
+        <button id="btn2">Print Array</button>
+        <p></p>
+    </div>
+
+
+
+    <script>
+
+
+                // Assignment First-------------------------------------------->
+
+        // Print the names value entered in console and click on print array button print in document-------->
+
+
+        // From Here--------------------------------------->
+
+        // const names = [];
+
+        // const input = document.querySelector("input")
+        // const add = document.querySelector("#btn1")
+        // const made = document.querySelector("#btn2")
+        // const para = document.querySelector("p")
+
+        // add.onclick = () => {
+        //     names.push(input.value)
+        //     console.log(names)
+        // }
+        // made.onclick = () => {
+        //     let out = [];
+        //     for (var i = 0; i < names.length; i++) {
+        //         let contain = ""
+        //         for (var j = 0; j < names[i].length; j++) {
+        //             contain += names[i][j];
+        //         }
+
+        //         out.push(contain);
+        //         para.innerHTML = out;
+        //     }
+
+        // }
+
+
+
+        // To here------------------------------------------>
+
+
+
+
+        // Assignment Second ---------->
+
+        // Print the input names value reverse on the output text area ---------------->
+
+        // From here----------------->
+
+
+        //         const numbers = [];
+
+        // const input=document.querySelector("input")
+        // const add=document.querySelector("#btn1")
+        // const made=document.querySelector("#btn2")
+        // const para=document.querySelector("p")
+
+        // // anonymous function 
+        // add.onclick=function()
+        // {
+
+        // console.log()
+        // }
+
+        // add.onclick=() =>
+        // {
+        // numbers.push(input.value)
+        // console.log(numbers)
+        // }
+        // made.onclick=() =>
+        // {
+        //     let out=[];
+        //    for(var i=numbers.length-1;i>=0;i--)
+        //    {
+        //     out.push(numbers[i]);
+        //    }
+        //     para.innerHTML=out
+
+        // }
+
+
+        // To here-------------------->
+
+
+
+
+
+
+
+        // Assignment Third-------------------------------->
+
+        // Print the console names value by using set interval ----------------------------->
+
+
+        // From Here--------------------------->
+
+        const names = [];
+
+        const input = document.querySelector("input");
+        const add = document.querySelector("#btn1");
+        const made = document.querySelector("#btn2");
+        const para = document.querySelector("p");
+
+        add.onclick = () => {
+            names.push(input.value);
+            console.log(names);
+        };
+
+        made.onclick = () => {
+            let out = [];
+            let strength = 0;
+
+            var intervalId = setInterval(() => {
+                if (strength < names.length) {
+                    let contain = "";
+                    for (var j = 0; j < names[strength].length; j++) {
+                        contain += names[strength][j];
+                    }
+
+                    out.push(contain);
+                    para.innerHTML = out.join(', ');
+                    strength++;     
+                } else {
+                    clearInterval(intervalId);
+                }
+            }, 1000);
+        };
+
+
+        // To Here--------------------------------------->
+
+    </script>
+</body>
+
+</html>
